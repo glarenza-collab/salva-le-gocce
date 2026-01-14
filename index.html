@@ -26,28 +26,29 @@
 
 <button onclick="fine()">🏁 FINE GIOCO</button>
 
+<p id="messaggio"></p>
+
 <script>
 let acqua = 0;
 
+function aggiorna() {
+document.getElementById("acqua").innerText = acqua;
+}
+
 function giusto() {
-alert("Bravo! Hai risparmiato acqua 👍");
+document.getElementById("messaggio").innerText = "Bravo! Hai risparmiato acqua 💧";
 }
 
 function sbagliato() {
-acqua = acqua + 20;
-document.getElementById("acqua").innerHTML = acqua;
-alert("Ops! Hai sprecato 20 litri 😢");
+acqua += 10;
+aggiorna();
+document.getElementById("messaggio").innerText = "Attenzione! Hai sprecato acqua 🚱";
 }
 
 function fine() {
-if (acqua > 40) {
-alert("Consumo alto! Possiamo fare meglio 💧");
-} else {
-alert("Ottimo! Sei un eroe dell’acqua 🌍");
-}
+document.getElementById("messaggio").innerText =
+"Gioco finito! Acqua sprecata: " + acqua + " litri";
 }
 </script>
 
-</body>
-</html>
 
