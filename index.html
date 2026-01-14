@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Salva le Gocce</title>
+</head>
+
+<body style="text-align:center; font-family:Arial; background:#e0f7fa;">
+
+<h1>💧 Salva le Gocce</h1>
+<p>Scegli le azioni giuste per non sprecare acqua</p>
+
+<h2>Acqua sprecata: <span id="acqua">0</span> litri</h2>
+
+<button onclick="giusto()">🚿 Chiudo l’acqua mentre mi lavo i denti</button>
+<br><br>
+
+<button onclick="sbagliato()">🚿 Lascio l’acqua aperta</button>
+<br><br>
+
+<button onclick="giusto()">🛁 Faccio una doccia breve</button>
+<br><br>
+
+<button onclick="sbagliato()">🛁 Faccio il bagno</button>
+<br><br>
+
+<button onclick="fine()">🏁 FINE GIOCO</button>
+
+<script>
+let acqua = 0;
+
+function giusto() {
+alert("Bravo! Hai risparmiato acqua 👍");
+}
+
+function sbagliato() {
+acqua = acqua + 20;
+document.getElementById("acqua").innerHTML = acqua;
+alert("Ops! Hai sprecato 20 litri 😢");
+}
+
+function fine() {
+if (acqua > 40) {
+alert("Consumo alto! Possiamo fare meglio 💧");
+} else {
+alert("Ottimo! Sei un eroe dell’acqua 🌍");
+}
+}
+</script>
+
+</body>
+</html>
+
